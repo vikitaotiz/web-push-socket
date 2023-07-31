@@ -22,7 +22,7 @@ webpush.setVapidDetails(
 );
 
 app.get("/", (req, res) => {
-  res.send("<h1>Web Push Notification.</h1>");
+  res.sendFile(__dirname + "/index.html");
 });
 
 io.on("connection", (socket) => {
